@@ -1,0 +1,185 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   background: #000;
+   color: white;
+   min-height: 100vh;
+}
+
+.hero-section {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background: #000;
+   overflow: hidden;
+}
+
+.logo-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(180deg, #ffd700 0%, #8b0000 100%);
+}
+
+.logo {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   display: block;
+}
+
+.centered-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   max-width: 1400px;
+   padding: 0 20px;
+   z-index: 2;
+}
+
+.description {
+   font-size: 22px;
+   line-height: 1.4;
+   max-width: 800px;
+   margin: 0 auto 40px;
+   letter-spacing: 0.5px;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.contract-box {
+   background: rgba(128, 128, 128, 0.2);
+   padding: 25px;
+   border-radius: 10px;
+   margin: 0 auto;
+   max-width: 900px;
+   display: flex;
+   gap: 20px;
+   backdrop-filter: blur(5px);
+}
+
+#contractAddress {
+   flex: 1;
+   padding: 15px;
+   background: transparent;
+   border: none;
+   color: white;
+   font-size: 20px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   letter-spacing: 0.5px;
+}
+
+button {
+   padding: 15px 40px;
+   background: #ffd700;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: background-color 0.3s;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 18px;
+   text-transform: uppercase;
+}
+
+button:hover {
+   background: #ffc800;
+}
+
+.social-icons {
+   position: absolute;
+   bottom: 40px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 30px;
+   z-index: 2;
+}
+
+.social-icons a {
+   display: block;
+   transition: transform 0.3s;
+}
+
+.social-icons img {
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+}
+
+.social-icons a:hover {
+   transform: translateY(-5px);
+}
+
+.copy-message {
+   position: fixed;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   background: rgba(0, 0, 0, 0.8);
+   color: white;
+   padding: 10px 20px;
+   border-radius: 5px;
+   opacity: 0;
+   transition: opacity 0.3s;
+   font-size: 16px;
+   z-index: 3;
+}
+
+@media (max-width: 768px) {
+   .description {
+      font-size: 18px;
+      padding: 15px;
+      margin-bottom: 30px;
+   }
+
+   .contract-box {
+      flex-direction: column;
+      margin: 0 20px;
+      padding: 20px;
+   }
+
+   button {
+      width: 100%;
+   }
+
+   .social-icons {
+      gap: 20px;
+      bottom: 30px;
+   }
+
+   .social-icons img {
+      width: 35px;
+      height: 35px;
+   }
+}
+
+@media (max-width: 480px) {
+   .description {
+      font-size: 16px;
+   }
+
+   #contractAddress {
+      font-size: 16px;
+   }
+
+   .social-icons {
+      gap: 15px;
+      bottom: 20px;
+   }
+
+   .social-icons img {
+      width: 30px;
+      height: 30px;
+   }
+}

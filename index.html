@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a simple webpage with basic layout">
-    <meta name="keywords" content="HTML, layout, webpage">
-    <title>My page</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to my page!</h1>
-    </header>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Shell information page" />
+      <meta name="keywords" content="HTML, layout, webpage" />
+      <title>Shell</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="icon" type="image/png" href="images/ico_5.png" />
+   </head>
+   <body>
+      <div class="hero-section">
+         <div class="logo-container">
+            <img src="images/bg.png" alt="Shell Logo" class="logo" />
+         </div>
 
-    <main>
-        <section>
-            <h2>About us</h2>
-            <p>This is a simple webpage created to demonstrate basic HTML layout. Here we can place any content we need.</p>
-        </section>
+         <div class="centered-content">
+            <p class="description">
+               Shell, or Royal Dutch Shell, is a giant in the world of energy,
+               with a long history that began in 1907 when two companies — Royal
+               Dutch Petroleum and Shell Transport and Trading — merged to
+               create one of the most influential oil and gas corporations on
+               the planet.
+            </p>
 
-        <section>
-            <h2>Our advantages</h2>
-            <ul>
-                <li>Simplicity</li>
-                <li>Clean code</li>
-                <li>Semantic markup</li>
-                <li>Accessibility</li>
-            </ul>
-        </section>
-    </main>
+            <div class="contract-box">
+               <input
+                  type="text"
+                  id="contractAddress"
+                  value="nxjPuLHbovKSohmrwXRtvndGqny7dGbXUGcJ98XppTf"
+                  readonly
+               />
+               <button onclick="copyContract()">Copy</button>
+            </div>
+         </div>
 
-    <footer>
-        <p>&copy; 2024 All rights reserved</p>
-    </footer>
-</body>
+         <div class="social-icons">
+            <a
+               href="https://twitter.com"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               <img src="images/ico_1.png" alt="Twitter" />
+            </a>
+            <a
+               href="https://telegram.org"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               <img src="images/ico_2.png" alt="Telegram" />
+            </a>
+            <a
+               href="https://dexscreener.com"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               <img src="images/ico_3.png" alt="Dexscreener" />
+            </a>
+            <a
+               href="https://www.dextools.io"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               <img src="images/ico_4.png" alt="Dextools" />
+            </a>
+         </div>
+      </div>
+
+      <div id="copyMessage" class="copy-message">Copied to clipboard!</div>
+
+      <script>
+         function copyContract() {
+            const contractInput = document.getElementById('contractAddress');
+            contractInput.select();
+            document.execCommand('copy');
+
+            const copyMessage = document.getElementById('copyMessage');
+            copyMessage.style.opacity = '1';
+
+            setTimeout(() => {
+               copyMessage.style.opacity = '0';
+            }, 2000);
+         }
+      </script>
+   </body>
 </html>
