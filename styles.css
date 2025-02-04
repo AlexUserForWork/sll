@@ -26,13 +26,19 @@ body {
    width: 100%;
    height: 100%;
    background: linear-gradient(180deg, #ffd700 0%, #8b0000 100%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .logo {
    width: 100%;
    height: 100%;
-   object-fit: contain;
+   object-fit: cover;
+   object-position: top;
    display: block;
+   min-width: 100vw;
+   min-height: 100vh;
 }
 
 .centered-content {
@@ -52,9 +58,10 @@ body {
    max-width: 800px;
    margin: 0 auto 40px;
    letter-spacing: 0.5px;
-   background: rgba(0, 0, 0, 0.7);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
    padding: 20px;
    border-radius: 10px;
+   color: #ffffff;
 }
 
 .contract-box {
